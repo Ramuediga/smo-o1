@@ -7,7 +7,7 @@ services:
     stop_grace_period: 5m
     hostname: "O-RAN-O-RU-1"
     ports:
-     - "::18300:830"
+     - ":18300:830"
     environment:
       IPv6_ENABLED: ${IPv6_ENABLED}
       SSH_CONNECTIONS: ${SSH_CONNECTIONS}
@@ -45,7 +45,7 @@ services:
     stop_grace_period: 5m
     hostname: "O-RAN-O-DU-1"
     ports:
-     - "::18310:830"
+     - ":18310:830"
     environment:
       IPv6_ENABLED: ${IPv6_ENABLED}
       SSH_CONNECTIONS: ${SSH_CONNECTIONS}

@@ -48,7 +48,7 @@ fi
 sleep 30
 
 HOST_IP=$(hostname -I | awk '{print $1}')
-USER_PWD=admin:Kp8bJ4SXszM0WXlhak3eHlcse2gAw84vaoGGmJvUy2U
+USER_PWD=admin:admin
 
 # Add DU
 echo "Adding DU simulator"
@@ -152,11 +152,12 @@ else
     exit 1
 fi
 
+sleep 600000
 # Bring down the sdnr
-docker-compose down
+#docker-compose down
 
 # bring down the simulators
-cd tests/
-docker-compose down
-echo -e "\nTests completed"
-exit 0
+#cd tests/
+#docker-compose down
+#echo -e "\nTests completed"
+#exit 0

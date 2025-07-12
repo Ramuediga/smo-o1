@@ -1,0 +1,31 @@
+spclab:/home/spclab/smo/smo-o1# curl -sw '%{http_code}' -u admin:admin -X GET "http://localhost:8181/rests/data/network-topology:network-topology/topology=topology-netconf/node=o-ru/yang-ext:mount/o-ran-uplane-conf:user-plane-configuration/tx-array-carriers=txarraycarrier0" -H "accept: application/xml" -v -i
+*   Trying 127.0.0.1:8181...
+* Connected to localhost (127.0.0.1) port 8181 (#0)
+* Server auth using Basic with user 'admin'
+> GET /rests/data/network-topology:network-topology/topology=topology-netconf/node=o-ru/yang-ext:mount/o-ran-uplane-conf:user-plane-configuration/tx-array-carriers=txarraycarrier0 HTTP/1.1
+> Host: localhost:8181
+> Authorization: Basic YWRtaW46YWRtaW4=
+> User-Agent: curl/7.81.0
+> accept: application/xml
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+< Set-Cookie: JSESSIONID=node0t69jmkpiway31hpl6ynsohcag56.node0; Path=/; HttpOnly
+Set-Cookie: JSESSIONID=node0t69jmkpiway31hpl6ynsohcag56.node0; Path=/; HttpOnly
+< Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+< Set-Cookie: rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Sun, 01-Sep-2024 14:21:43 GMT; SameSite=lax
+Set-Cookie: rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Sun, 01-Sep-2024 14:21:43 GMT; SameSite=lax
+< ETag: "2021-07-26-tx-array-carriers"
+ETag: "2021-07-26-tx-array-carriers"
+< Last-Modified: 2024-Sep-02 14:21:43
+Last-Modified: 2024-Sep-02 14:21:43
+< Content-Type: application/xml
+Content-Type: application/xml
+< Content-Length: 540
+Content-Length: 540
+
+< 
+* Connection #0 to host localhost left intact
+<tx-array-carriers xmlns="urn:o-ran:uplane-conf:1.0"><name>txarraycarrier0</name><active>INACTIVE</active><downlink-radio-frame-offset>0</downlink-radio-frame-offset><gain>27.0</gain><rw-type>NR</rw-type><rw-duplex-scheme>TDD</rw-duplex-scheme><center-of-channel-bandwidth>3700020000</center-of-channel-bandwidth><channel-bandwidth>100000000</channel-bandwidth><state>READY</state><downlink-sfn-offset>0</downlink-sfn-offset><duplex-scheme>TDD</duplex-scheme><absolute-frequency-center>646668</absolute-frequency-center></tx-array-carriers>200
